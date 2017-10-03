@@ -1,0 +1,22 @@
+.banner {
+  background-image: linear-gradient(to right, rgba($peach, 0.35), rgba($blue, 0.55));
+  min-height: 60vh;
+
+  a {
+    text-decoration: none;
+
+    @include hover {
+      color: $black;
+      text-decoration: none;
+    }
+  }
+
+  .container {
+    height: 100%;
+  }
+
+  @include media-breakpoint-up(md) {
+    height: 50vh;
+  }
+}
+

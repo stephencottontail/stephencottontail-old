@@ -1,0 +1,33 @@
+.home-link {
+  text-decoration: none;
+
+  @include hover {
+    text-decoration: none;
+  }
+}
+
+.logo-letter {
+  font-family: $serif;
+  font-size: 80px;
+  font-weight: 900;
+}
+
+.logo-shape {
+  stroke: $peach;
+}
+
+.logo-expand {
+  animation-name: concen;
+  animation-duration: 2000ms;
+  transform-origin: center center;
+}
+
+@keyframes concen {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,31 @@
+/* colors */
+$white: #f9f9f9;
+$black: #212529;
+$peach: #fbceb1;
+$blue:  #8179c8;
+// $blue: #7872ae;
+$green: #d0fccb;
+
+/* fonts */
+$sans:  "proxima-nova", "Helvetica Neue", "Arial", sans-serif;
+$serif: "freight-text-pro", "Georgia", serif;
+$mono:  "Inconsolata", "SFMono-Regular", "Courier New", monospace;
+
+/* misc */
+$transition: "all 350ms ease-out";
+
+/* Bootstrap overrides */
+$link-color:       $black;
+$link-hover-color: $peach;
+
+$font-family-sans-serif: $sans;
+$font-family-monospace:  $mono;
+$font-family-base:       $font-family-sans-serif;
+$headings-font-family:   $serif;
+$headings-font-weight:   300;
+
+$code-color: $white;
+$code-bg:    $black;
+
+$kbd-color: $white;
+$kbd-bg:    $black;

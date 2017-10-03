@@ -1,0 +1,21 @@
+.front {
+  background-image: linear-gradient(to right, rgba($peach, 0.35), rgba($blue, 0.55));
+
+  .entry-title {
+    font-weight: 900;
+    font-style: italic;
+
+    @include media-breakpoint-up(md) {
+      font-size: $display1-size;
+    }
+  }
+
+  .entry-content {
+    text-align: right;
+
+    @include media-breakpoint-up(md) {
+      position: relative;
+      top: $spacer;
+    }
+  }
+}
