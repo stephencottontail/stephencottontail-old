@@ -27,10 +27,17 @@ add_filter('body_class', function (array $classes) {
 });
 
 /**
- * Add "… Continued" to the excerpt
+ * Let's make excerpts more interesting
  */
 add_filter('excerpt_more', function () {
-    return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'sage') . '</a>';
+    return sprintf('&hellip;<div class="read-more-wrapper"><a class="btn btn-primary read-more" href="%1$s">%2$s</a></div>',
+        esc_url( get_permalink() ),
+        'Read More'
+    );
+});
+
+add_filter('excerpt_length', function () {
+    return 15;
 });
 
 /**
