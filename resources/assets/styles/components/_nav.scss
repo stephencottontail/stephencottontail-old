@@ -89,3 +89,26 @@
     }
   }
 }
+
+.widget_nav_menu {
+  margin-bottom: $spacer;
+
+  ul {
+    list-style: none;
+    margin: 0 0 ($spacer) 0;
+    text-transform: uppercase;
+  }
+
+  li {
+    border-bottom: 1px solid $gray-600;
+    padding: map-get($spacers, 2) 0;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+}

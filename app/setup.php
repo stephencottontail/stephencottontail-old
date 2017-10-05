@@ -79,12 +79,12 @@ add_action('widgets_init', function () {
         'after_title'   => '</h3>'
     ];
     register_sidebar([
-        'name'          => __('Primary', 'sage'),
-        'id'            => 'sidebar-primary'
+        'name' => 'Footer 1',
+        'id'   => 'footer-1'
     ] + $config);
     register_sidebar([
-        'name'          => __('Footer', 'sage'),
-        'id'            => 'sidebar-footer'
+        'name' => 'Footer 2',
+        'id'   => 'footer-2'
     ] + $config);
 });
 
