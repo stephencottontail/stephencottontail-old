@@ -1,7 +1,6 @@
-body {
-  padding-bottom: 300px;
-}
-
-.content {
-  background-color: $white;
+@include media-breakpoint-up(lg) {
+  .content {
+    background-color: $white;
+    margin-bottom: 301px;
+  }
 }
