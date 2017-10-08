@@ -8,5 +8,7 @@
   @while(have_posts()) @php(the_post())
     @include('partials.content-front')
   @endwhile
-  @include('partials.recent')
+  <div class="container">
+    @include('partials.recent')
+  </div>
 @endsection
