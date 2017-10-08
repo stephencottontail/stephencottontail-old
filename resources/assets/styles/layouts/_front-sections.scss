@@ -1,4 +1,4 @@
-.recent-posts {
+.front-page-section {
   padding-top: map-get($spacers, 5);
   padding-bottom: map-get($spacers, 5);
 
@@ -6,6 +6,12 @@
     position: relative;
     margin-bottom: map-get($spacers, 3);
     text-transform: uppercase;
+
+    a {
+      color: $text-muted;
+      font-style: italic;
+      text-decoration: none;
+    }
 
     &::after {
       position: absolute;
