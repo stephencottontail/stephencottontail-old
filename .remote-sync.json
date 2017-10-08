@@ -1,0 +1,11 @@
+{
+  "transport": "scp",
+  "hostname": "staging.stephencottontail.com",
+  "username": "stephen",
+  "keyfile": "/Users/stephen/.ssh/id_rsa",
+  "target": "/srv/www/staging.stephencottontail.com/current/web/app/themes/stephencottontail",
+  "ignore": [
+    ".remote-sync.json",
+    ".git/**"
+  ]
+}
