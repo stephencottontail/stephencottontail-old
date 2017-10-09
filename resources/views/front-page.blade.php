@@ -9,6 +9,7 @@
     @include('partials.content-front')
   @endwhile
   <div class="container">
+    @include('partials.portfolio')
     @include('partials.recent')
   </div>
 @endsection
