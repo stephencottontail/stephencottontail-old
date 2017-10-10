@@ -13,7 +13,7 @@
     {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>Pages: ', 'after' => '</p></nav>']) !!}
   </div>
   <footer class="entry-footer my-5">
-    @include('partials/entry-footer')
+    {!! Single::entryFooter() !!}
   </footer>
   @php(comments_template('/partials/comments.blade.php'))
 </article>
