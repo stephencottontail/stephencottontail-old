@@ -9,7 +9,7 @@ class Single extends Controller
     public function entryFooter()
     {
         $footer = '';
-        if ('jetpack-portfolio' !== get_post_type()) {
+        if ('post' == get_post_type()) {
             if (get_the_category_list()) {
                 $footer .= sprintf('<p class="categories mb-0"><span class="meta-title">Posted In</span> %s</p>', get_the_category_list(', '));
             }
