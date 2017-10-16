@@ -1,23 +1,32 @@
 .comment-list {
   @extend .list-unstyled;
+
+  .children {
+    list-style: none;
+  }
 }
 
-.comment-list ol {
-  list-style: none;
-}
+.comment-form {
+  margin: map-get($spacers, 3) 0;
 
-.comment-form p {
-  @extend .form-group;
-}
+  p {
+    @extend .form-group;
+  }
 
-.comment-form input[type="text"],
-.comment-form input[type="email"],
-.comment-form input[type="url"],
-.comment-form textarea {
-  @extend .form-control;
-}
+  input,
+  textarea {
+    @extend .form-control;
 
-.comment-form input[type="submit"] {
-  @extend .btn;
-  @extend .btn-primary;
+    &:focus {
+      background-color: #fff;
+      border-color: $black;
+    }
+  }
+
+  input[type="submit"] {
+    @extend .btn;
+    @extend .btn-primary;
+
+    width: auto;
+  }
 }
