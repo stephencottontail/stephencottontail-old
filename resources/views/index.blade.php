@@ -1,18 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
-  @include('partials.page-header')
+  <div class="container">
+    @if (have_posts())
+      @if (is_home() && !is_front_page())
+        <header>
+          <h1 class="screen-reader-text">@php(single_post_title())</h1>
+        </header>
+      @endif
 
-  @if (!have_posts())
-    <div class="alert alert-warning">
-      {{ __('Sorry, no results were found.', 'sage') }}
-    </div>
-    {!! get_search_form(false) !!}
-  @endif
+      @while (have_posts()) @php(the_post())
+        @include('partials.content-'.get_post_type())
+      @endwhile
 
-  @while (have_posts()) @php(the_post())
-    @include('partials.content-'.get_post_type())
-  @endwhile
-
-  {!! get_the_posts_navigation() !!}
+      {!! the_posts_pagination(['before_page_number' => '<span class="screen-reader-text">Page</span>']) !!}
+    @endif
+  </div>
 @endsection

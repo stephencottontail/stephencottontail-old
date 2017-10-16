@@ -12,18 +12,7 @@ if (post_password_required()) {
       {!! wp_list_comments(['style' => 'ol', 'avatar_size' => 64, 'short_ping' => true, 'callback' => 'App\display_comments']) !!}
     </ol>
 
-    @if (get_comment_pages_count() > 1 && get_option('page_comments'))
-      <nav class="comment-navigation">
-        <ul class="pager">
-          @if (get_previous_comments_link())
-            <li class="previous">@php(previous_comments_link(__('&larr; Older comments', 'sage')))</li>
-          @endif
-          @if (get_next_comments_link())
-            <li class="next">@php(next_comments_link(__('Newer comments &rarr;', 'sage')))</li>
-          @endif
-        </ul>
-      </nav>
-    @endif
+    @php(the_comments_navigation($args = ['prev_text' => '&larr; Older Comments', 'next_text' => 'Newer Comments &rarr;']))
   @endif
 
   @if (!comments_open() && get_comments_number() != '0' && post_type_supports(get_post_type(), 'comments'))

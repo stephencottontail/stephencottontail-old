@@ -1,0 +1,12 @@
+@mixin nav-link {
+  border: 1px solid transparent;
+  color: $text-muted;
+  padding: map-get($spacers, 3);
+  text-decoration: none;
+
+  @include hover {
+    border-bottom-color: $peach;
+    color: $black;
+    text-decoration: none;
+  }
+}

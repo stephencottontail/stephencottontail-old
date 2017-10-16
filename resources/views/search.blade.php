@@ -14,5 +14,5 @@
     @include('partials.content-search')
   @endwhile
 
-  {!! get_the_posts_navigation() !!}
+  {!! the_posts_pagination(['before_page_number' => '<span class="screen-reader-text">Page</span>']) !!}
 @endsection

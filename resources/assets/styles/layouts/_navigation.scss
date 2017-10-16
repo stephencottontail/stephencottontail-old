@@ -1,0 +1,49 @@
+.navigation {
+  padding-bottom: map-get($spacers, 5);
+}
+
+.page-numbers {
+  @include nav-link();
+
+  display: inline-block;
+
+  &.current {
+    border-bottom-color: $peach;
+    color: $black;
+  }
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+
+  a {
+    @include nav-link();
+
+    display: block;
+  }
+
+  .nav-previous {
+    flex-basis: 100%;
+
+    @include media-breakpoint-up(lg) {
+      flex-basis: 50%;
+    }
+  }
+
+  .nav-next {
+    flex-basis: 100%;
+
+    @include media-breakpoint-up(lg) {
+      flex-basis: 50%;
+      margin-left: auto;
+    }
+  }
+}
+
+.nav-title {
+  display: block;
+  color: $black;
+  text-transform: uppercase;
+}
