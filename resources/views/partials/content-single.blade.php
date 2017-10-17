@@ -1,4 +1,4 @@
-<article @php(post_class('py-5'))>
+<article @php(post_class('py-3'))>
   @if(has_post_thumbnail())
     <figure class="entry-thumbnail mb-3">
       @php(the_post_thumbnail())
