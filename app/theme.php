@@ -8,7 +8,7 @@ function display_comments($comment, $args, $depth) {
 
     if ('pingback' == $comment->comment_type || 'trackback' == $comment->comment_type) : ?>
         <li id="div-comment-<?php echo comment_ID(); ?>" <?php comment_class(); ?>>
-            <article class="pingback-body">
+            <article class="pingback-body mb-5">
                 <header class="pingback-header">Pingback</header>
                 <div class="pingback-content">
                     <cite><?php comment_author_link(); ?></cite>
@@ -17,7 +17,7 @@ function display_comments($comment, $args, $depth) {
             </article>
     <?php else : ?>
         <li id="comment-<?php comment_ID(); ?>" <?php comment_class(empty($args['has_children']) ? '' : 'parent'); ?>>
-            <article class="comment-body">
+            <article class="comment-body mb-5">
                 <header class="comment-header">
                     <?php echo get_avatar($comment, $args['avatar_size']); ?>
                     <cite class="fn"><?php echo get_comment_author_link(); ?></cite>
@@ -45,13 +45,13 @@ function display_comments($comment, $args, $depth) {
                     <?php if (!empty($comment->comment_parent)) :
                         $parent_comment = get_comment($comment->comment_parent);
                         ?>
-                        <span class="in-reply-to">In reply to <a href="<?php echo esc_url(get_comment_link(get_comment($parent_comment))); ?>"><?php echo esc_html($parent_comment->comment_author); ?></a></span>
+                        <span class="in-reply-to mb-3 text-muted">In reply to <a href="<?php echo esc_url(get_comment_link(get_comment($parent_comment))); ?>"><?php echo esc_html($parent_comment->comment_author); ?></a></span>
                     <?php
                     endif;
 
                     if ('0' == $comment->comment_approved) :
                     ?>
-                        <span class="awaiting-moderation">Your comment is awaiting moderation.</span>
+                        <span class="awaiting-moderation mb-3 text-muted">Your comment is awaiting moderation.</span>
                     <?php
                     endif;
 
