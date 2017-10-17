@@ -1,18 +1,22 @@
 @extends('layouts.app')
 
 @section('content')
-  @include('partials.page-header')
-
-  @if (!have_posts())
-    <div class="alert alert-warning">
-      {{  __('Sorry, no results were found.', 'sage') }}
+  <div class="container search-results py-5">
+    <div class="archive-header pb-3 mb-5">
+      <h1 class="archive-title">{{ App::title() }}</h1>
     </div>
-    {!! get_search_form(false) !!}
-  @endif
 
-  @while(have_posts()) @php(the_post())
-    @include('partials.content-search')
-  @endwhile
+    @if (!have_posts())
+      <div class="alert alert-warning mb-5">
+        {{  __('Sorry, no results were found.', 'sage') }}
+      </div>
+      {!! get_search_form(false) !!}
+    @endif
 
-  {!! the_posts_pagination(['before_page_number' => '<span class="screen-reader-text">Page</span>']) !!}
+    @while(have_posts()) @php(the_post())
+      @include('partials.content-search')
+    @endwhile
+
+    {!! the_posts_pagination(['before_page_number' => '<span class="screen-reader-text">Page</span>']) !!}
+  </div>
 @endsection

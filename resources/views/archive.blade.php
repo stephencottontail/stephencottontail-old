@@ -2,7 +2,7 @@
 
 @section('content')
   <div class="container">
-    <div class="archive-header">
+    <div class="archive-header pb-3 mb-3">
       <h1 class="archive-title">{{ App::title() }}</h1>
     </div>
     @while(have_posts()) @php(the_post())

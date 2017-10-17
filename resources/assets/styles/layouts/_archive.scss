@@ -1,3 +1,4 @@
 .archive-header {
-  margin-bottom: map-get($spacers, 5);
+  display: inline-block;
+  border-bottom: 1px solid $peach;
 }
