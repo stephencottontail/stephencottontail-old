@@ -2,7 +2,7 @@
   margin-bottom: map-get($spacers, 5);
 
   .entry-header {
-    text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+    text-shadow: 4px 4px 2px rgba($gray-600, 1);
   }
 
   &.has-post-thumbnail {

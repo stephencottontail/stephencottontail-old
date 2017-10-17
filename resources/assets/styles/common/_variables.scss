@@ -4,8 +4,6 @@ $black:  #212529;
 $peach:  #fbceb1;
 $blue:   #8179c8;
 $green:  #d0fccb;
-$red:    #a42a35;
-$purple: #5e1735;
 
 /* fonts */
 $sans:  "proxima-nova", "Helvetica Neue", "Arial", sans-serif;
@@ -16,8 +14,32 @@ $mono:  "Inconsolata", "SFMono-Regular", "Courier New", monospace;
 $transition: "all 350ms ease-out";
 
 /* Bootstrap overrides */
-$link-color:       $black;
-$link-hover-color: $peach;
+
+/**
+ * Note: A side effect of declaring Bootstrap overrides here is that
+ * if you intend on using the `theme-colors` map, you'll get errors
+ * because not all of the color variables exist yet. Instead, you must
+ * define all colors in the map, even ones you don't intend on
+ * changing. This is a pain, but it's probably worth it, given the
+ * sheer number of Bootstrap variables.
+ */
+$red:     #dc3545;
+$yellow:  #ffc107;
+$cyan:    #17a2b8;
+
+$theme-colors: (
+  primary: $blue,
+  secondary: $peach,
+  success: $green,
+  info: $cyan,
+  warning: $yellow,
+  danger: $red,
+  light: $white,
+  dark: $black
+);
+
+$link-color:       map-get($theme-colors, dark);
+$link-hover-color: map-get($theme-colors, primary);
 
 $font-family-sans-serif: $sans;
 $font-family-monospace:  $mono;
@@ -25,8 +47,8 @@ $font-family-base:       $font-family-sans-serif;
 $headings-font-family:   $serif;
 $headings-font-weight:   300;
 
-$code-color: $white;
-$code-bg:    $black;
+$code-color: map-get($theme-colors, light);
+$code-bg:    map-get($theme-colors, dark);
 
-$kbd-color: $white;
-$kbd-bg:    $black;
+$kbd-color: map-get($theme-colors, light);
+$kbd-bg:    map-get($theme-colors, dark);

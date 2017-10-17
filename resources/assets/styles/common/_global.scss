@@ -5,8 +5,8 @@
   text-decoration: none;
 
   @include hover {
-    border-bottom-color: $peach;
-    color: $black;
+    border-bottom-color: map-get($theme-colors, primary);
+    color: map-get($theme-colors, dark);
     text-decoration: none;
   }
 }

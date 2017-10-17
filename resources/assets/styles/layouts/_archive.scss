@@ -1,4 +1,4 @@
 .archive-header {
   display: inline-block;
-  border-bottom: 1px solid $peach;
+  border-bottom: 1px solid map-get($theme-colors, primary);
 }

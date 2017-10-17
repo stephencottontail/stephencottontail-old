@@ -62,13 +62,13 @@
 
         a {
           display: block;
-          background-color: $black;
-          color: $white;
+          background-color: map-get($theme-colors, dark);
+          color: map-get($theme-colors, light);
           padding: map-get($spacers, 2) map-get($spacers, 1);
 
           &:hover {
             background-color: $gray-600;
-            color: $white;
+            color: map-get($theme-colors, light);
           }
         }
       }

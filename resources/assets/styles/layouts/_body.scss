@@ -1,6 +1,6 @@
 @include media-breakpoint-up(lg) {
   .content {
-    background-color: $white;
+    background-color: map-get($theme-colors, light);
     margin-bottom: 301px;
   }
 }
