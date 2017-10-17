@@ -37,4 +37,9 @@ class Single extends Controller
 
         return $args;
     }
+
+    public function attachmentMeta ()
+    {
+        return wp_get_attachment_metadata();
+    }
 }
