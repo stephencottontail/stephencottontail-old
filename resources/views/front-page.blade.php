@@ -6,7 +6,7 @@
 
 @section('content')
   @while(have_posts()) @php(the_post())
-    @include('partials.content-front')
+    @include('partials.content-hero')
   @endwhile
   <div class="container">
     @include('partials.portfolio')
