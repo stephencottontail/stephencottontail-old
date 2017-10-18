@@ -1,0 +1,19 @@
+.entry-title {
+  display: block;
+
+  @include media-breakpoint-up(md) {
+    display: inline-block;
+    font-size: $display1-size;
+  }
+}
+
+.published {
+  display: block;
+  font-family: $headings-font-family;
+
+  @include media-breakpoint-up(md) {
+    display: inline-block;
+    font-size: $font-size-lg;
+    margin-left: map-get($spacers, 3);
+  }
+}
