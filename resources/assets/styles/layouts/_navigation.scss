@@ -47,3 +47,19 @@
   color: $black;
   text-transform: uppercase;
 }
+
+.page-nav {
+  font-weight: bold;
+
+  .page-link {
+    padding: map-get($spacers, 3);
+  }
+
+  a {
+    @include nav-link();
+
+    & .page-link {
+      padding: 0;
+    }
+  }
+}

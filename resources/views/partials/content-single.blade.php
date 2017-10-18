@@ -10,7 +10,7 @@
   </header>
   <div class="entry-content">
     @php(the_content())
-    {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>Pages: ', 'after' => '</p></nav>']) !!}
+    {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>Pages: ', 'after' => '</p></nav>', 'link_before' => '<span class="page-link">', 'link_after' => '</span>']) !!}
   </div>
   <footer class="entry-footer my-5">
     {!! Single::entryFooter() !!}
