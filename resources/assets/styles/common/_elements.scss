@@ -1,0 +1,39 @@
+blockquote {
+  border-left: 2px solid map-get($theme-colors, primary);
+  font-family: $headings-font-family;
+  font-size: $font-size-lg;
+  margin: map-get($spacers, 3) 0;
+  padding-left: map-get($spacers, 5);
+}
+
+table {
+  border: 1px solid $gray-600;
+
+  th,
+  td {
+    border: 1px solid $gray-600;
+    padding: map-get($spacers, 2);
+  }
+}
+
+abbr[title],
+acronym {
+  border-bottom: 1px dashed $gray-600;
+  cursor: help;
+  text-decoration: none;
+}
+
+tt {
+  padding: $code-padding-y $code-padding-x;
+  font-family: $font-family-monospace;
+  font-size: $code-font-size;
+  color: $kbd-color;
+  background-color: $kbd-bg;
+
+  @include border-radius($border-radius-sm);
+  @include box-shadow($kbd-box-shadow);
+}
+
+pre {
+  font-size: $font-size-base;
+}
