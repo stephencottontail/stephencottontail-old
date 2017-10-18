@@ -6,6 +6,9 @@
     ],
     "customizer": [
       "./scripts/customizer.js"
+    ],
+    "tinymce": [
+      "./scripts/tinymce.js"
     ]
   },
   "publicPath": "/app/themes/stephencottontail",
