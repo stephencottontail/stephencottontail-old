@@ -13,6 +13,18 @@
   }
 }
 
+.pagination {
+  text-align: center;
+
+  .nav-links {
+    display: block;
+
+    a {
+      display: inline-block;
+    }
+  }
+}
+
 .nav-links {
   display: flex;
   flex-wrap: wrap;
