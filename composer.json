@@ -1,31 +1,16 @@
 {
-  "name": "roots/sage",
+  "name": "stephencottontail/stephencottontail",
   "type": "wordpress-theme",
   "license": "MIT",
-  "description": "WordPress starter theme with a modern development workflow",
-  "homepage": "https://roots.io/sage/",
+  "description": "Personal theme for my personal site",
   "authors": [
     {
-      "name": "Ben Word",
-      "email": "ben@benword.com",
-      "homepage": "https://github.com/retlehs"
-    },
-    {
-      "name": "Scott Walkinshaw",
-      "email": "scott.walkinshaw@gmail.com",
-      "homepage": "https://github.com/swalkinshaw"
-    },
-    {
-      "name": "QWp6t",
-      "email": "hi@qwp6t.me",
-      "homepage": "https://github.com/qwp6t"
+      "name": "Stephen Dickinson",
+      "email": "stephencottontail@me.com",
+      "homepage": "http://stephencottontail.com/"
     }
   ],
   "keywords": ["wordpress"],
-  "support": {
-    "issues": "https://github.com/roots/sage/issues",
-    "forum": "https://discourse.roots.io/"
-  },
   "autoload": {
     "psr-4": {
       "App\\": "app/"
