@@ -1,5 +1,6 @@
 .entry-title {
   display: block;
+  word-break: break-word;
 
   @include media-breakpoint-up(md) {
     display: inline-block;
